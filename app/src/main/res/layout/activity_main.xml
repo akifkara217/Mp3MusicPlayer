@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#E7FF9800"
+        android:id="@+id/lowerLayout"
+        android:orientation="horizontal"
+        android:layout_height="70dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/txtSong1"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtSongMain"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7.5dp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="5dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="New song is loading ..."
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="21dp"
+                android:textStyle="bold|italic" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/buttons1"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="3dp"
+                android:id="@+id/btnPlayMain"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_pause"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_next"
+                android:layout_marginTop="16dp"
+                android:id="@+id/btnNextMain"
+                android:layout_toRightOf="@+id/btnPlayMain"/>
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_previous"
+                android:layout_marginTop="16dp"
+                android:id="@+id/btnPreviousMain"
+                android:layout_toLeftOf="@+id/btnPlayMain"/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/lowerLayout"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:layout_alignParentTop="true"
+            android:padding="9dp"
+            android:id="@+id/listView"
+            android:dividerHeight="10.sp"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
